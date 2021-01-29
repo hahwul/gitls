@@ -1,0 +1,82 @@
+project_name: TEMPALTE-HAHWUL
+
+before:
+  hooks:
+  - go mod download
+
+builds:
+  -
+    main: .
+    binary: TEMPALTE-HAHWUL
+    goos:
+      - windows
+      - linux
+      - darwin
+      - freebsd
+    goarch:
+      - amd64
+      - 386
+      - arm
+      - arm64
+    goarm:
+      - 6
+    ignore:
+      - goos: darwin
+        goarch: 386
+      - goos: darwin
+        goarch: arm
+      - goos: darwin
+        goarch: arm64
+      - goos: windows
+        goarch: 386
+      - goos: windows
+        goarch: arm
+      - goos: windows
+        goarch: arm64
+
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
+
+changelog:
+  sort: desc
+  filters:
+    exclude:
+    - '^MERGE'
+    - "{{ .Tag }}"
+
+release:
+  github:
+    owner: hahwul
+    name: TEMPALTE-HAHWUL
+
+brews:
+  -
+    name: TEMPALTE-HAHWUL
+    tap:
+      owner: hahwul
+      name: homebrew-TEMPALTE-HAHWUL
+    url_template: "https://github.com/hahwul/TEMPALTE-HAHWUL/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    commit_author:
+      name: hahwul
+      email: hahwul@gmail.com
+    folder: Formula
+    homepage: "https://www.hahwul.com"
+    description: ""
+    test: |
+      system "#{bin}/TEMPALTE-HAHWUL version"
+    install: |
+      bin.install "TEMPALTE-HAHWUL"
+snapcrafts:
+  -
+    name: TEMPALTE-HAHWUL
+    # Remember you need to `snapcraft login` first.
+    publish: true
+    summary: abcd
+    description: abcd
+    grade: stable
+    confinement: strict
+    license: MIT
+
+    apps:
+      TEMPALTE-HAHWUL:
+        plugs: ["home","network","network-bind"]
