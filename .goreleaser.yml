@@ -61,7 +61,7 @@ brews:
       email: hahwul@gmail.com
     folder: Formula
     homepage: "https://github.com/hahwul/gitls"
-    description: ""
+    description: "Listing git repository from URL/User/Org"
     test: |
       system "#{bin}/gitls -version"
     install: |
@@ -72,7 +72,7 @@ snapcrafts:
     # Remember you need to `snapcraft login` first.
     publish: true
     summary: Listing git repository from URL/User/Org
-    description: Listing git repository from URL/User/Org
+    description: This tool is available when the repository, such as github, is included in the bugbounty scope. Sometimes specified as an org name or user name rather than a specific repository, you can use this tool to extract url from all public repositories included in the org/user.
     grade: stable
     confinement: strict
     license: MIT
