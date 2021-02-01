@@ -25,6 +25,15 @@ So too many tasks can be blocked by the API for a certain time from github. In t
 ```
 $ go get -u github.com/hahwul/gitls
 ```
+### Using homebres
+```
+$ brew tap hahwul/gitls
+$ brew install gitls
+```
+### Using snapcraft
+```
+$ sudo snap install gitls
+```
 
 ## Usage 
 ```
