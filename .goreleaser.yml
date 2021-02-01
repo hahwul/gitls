@@ -60,7 +60,7 @@ brews:
       name: hahwul
       email: hahwul@gmail.com
     folder: Formula
-    homepage: "https://www.hahwul.com"
+    homepage: "https://github.com/hahwul/gitls"
     description: ""
     test: |
       system "#{bin}/gitls -version"
@@ -71,8 +71,8 @@ snapcrafts:
     name: gitls
     # Remember you need to `snapcraft login` first.
     publish: true
-    summary: abcd
-    description: abcd
+    summary: Listing git repository from URL/User/Org
+    description: Listing git repository from URL/User/Org
     grade: stable
     confinement: strict
     license: MIT
