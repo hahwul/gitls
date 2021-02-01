@@ -10,4 +10,5 @@ RUN go build -o gitls
 FROM debian:buster
 RUN mkdir /app
 WORKDIR /app/
+COPY --from=builder /go/src/app/gitls /app/gitls
 CMD ["/app/gitls"]
