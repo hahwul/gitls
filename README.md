@@ -1,6 +1,3 @@
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ebdafdc2a3b4d85b1be09033ebbd83f)](https://app.codacy.com/gh/hahwul/gitls?utm_source=github.com&utm_medium=referral&utm_content=hahwul/gitls&utm_campaign=Badge_Grade)
-
 <h1 align="center">
   <br>
   <a href=""><img src="" alt="" width="500px;"></a>
