@@ -7,4 +7,9 @@
   <a href="https://github.com/hahwul"><img src="https://img.shields.io/github/stars/hahwul?style=flat&logo=github"></a>
 </h1>
 
-> Oneline Description!
+> abcd
+
+Sample
+```
+$ torsocks ./gitls -l sample.lst
+```
