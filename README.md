@@ -17,10 +17,15 @@ $ go get -u github.com/hahwul/gitls
 
 ## Usage 
 ```
+Usage of gitls:
   -l string
     	List of targets (e.g -l sample.lst)
   -o string
     	write output file (optional)
+  -proxy string
+    	using custom proxy
+  -tor
+    	using tor proxy / localhost:9050
   -version
     	version of gitls
 ```
