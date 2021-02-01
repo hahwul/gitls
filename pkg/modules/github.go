@@ -3,9 +3,12 @@ package modules
 import (
 	"fmt"
 	"net/http"
+	"time"
 	"io/ioutil"
 	"encoding/json"
 
+	model "github.com/hahwul/gitls/pkg/model"
+	transport "github.com/hahwul/gitls/pkg/transport"
 )
 
 // GithubObject is json object of github api
@@ -15,11 +18,18 @@ type GithubObject struct {
 }
 
 // GetRepoListFromUser is gettting repo list from github
-func GetRepoListFromUser(user,repoHost string){
+func GetRepoListFromUser(user,repoHost string, options model.Options){
 	check := true
 	for i:=1 ; check ; i++ {
 		apiAddress := fmt.Sprintf("https://api."+repoHost+"/users/%v/repos?page=%v&per_page=100", user, i)
-		resp, err := http.Get(apiAddress)
+		req, err := http.NewRequest("GET",apiAddress,nil)
+		transport := transport.GetTransport(options)
+		client := &http.Client{
+			Timeout:   5 * time.Second,
+			Transport: transport,
+		}
+
+		resp, err := client.Do(req)
 		if err	!= nil {
 		}
 
