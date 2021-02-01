@@ -13,10 +13,10 @@ type GithubObject struct {
 	Fork bool `"json:fork"`
 }
 
-func GetRepoListFromUser(user string){
+func GetRepoListFromUser(user,repoHost string){
 	check := true
 	for i:=1 ; check ; i++ {
-		apiAddress := fmt.Sprintf("https://api.github.com/users/%v/repos?page=%v&per_page=100", user, i)
+		apiAddress := fmt.Sprintf("https://api."+repoHost+"/users/%v/repos?page=%v&per_page=100", user, i)
 		resp, err := http.Get(apiAddress)
 		if err	!= nil {
 		}

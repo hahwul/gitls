@@ -43,7 +43,11 @@ func checkURL(s string) {
 	str := strings.Split(s,"/")
 	size := len(str) // 4 is user/org , 5 is repository
 	if size == 4 {
-		module.GetRepoListFromUser(str[3])
+		if strings.Contains(str[2],"github") {
+			module.GetRepoListFromUser(str[3], str[2])
+		} else if strings.Contains(str[2], "gitlab") {
+			// TODO gitlab getting repos
+		}
 	} else if size == 5 {
 		fmt.Println(s)
 	}
