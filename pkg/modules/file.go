@@ -21,17 +21,11 @@ func readLines(filename string) ([]string, error) {
 	return lines, sc.Err()
 }
 
-// readLinesOrLiteral tries to read lines from a file, returning
-// the arg in a string slice if the file doesn't exist, unless
-// the arg matches its default value
+// ReadLinesOrLiteral tries to read lines from a file, returning
 func ReadLinesOrLiteral(arg string) ([]string, error) {
 	if isFile(arg) {
 		return readLines(arg)
 	}
-
-	// if the argument isn't a file, but it is the default, don't
-	// treat it as a literal value
-
 	return []string{arg}, nil
 }
 

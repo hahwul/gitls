@@ -8,11 +8,13 @@ import (
 
 )
 
+// GithubObject is json object of github api
 type GithubObject struct {
 	Html_URL string `"json:html_url"`
 	Fork bool `"json:fork"`
 }
 
+// GetRepoListFromUser is gettting repo list from github
 func GetRepoListFromUser(user,repoHost string){
 	check := true
 	for i:=1 ; check ; i++ {
