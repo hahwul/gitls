@@ -12,7 +12,7 @@ import (
 )
 
 func main(){
-	list := flag.String("l","","List of targets (e.g Repository URL and Owner URL and User URL)")
+	list := flag.String("l","","List of targets (e.g -l sample.lst)")
 	output := flag.String("o","","write output file (optional)")
 	version := flag.Bool("version",false,"version of gitls")
 	_=output
