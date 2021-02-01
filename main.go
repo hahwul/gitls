@@ -7,15 +7,21 @@ import (
 	"os"
 	"bufio"
 
+	printing "github.com/hahwul/gitls/pkg/printing"
 	module "github.com/hahwul/gitls/pkg/modules"
 )
 
 func main(){
 	list := flag.String("l","","List of targets (e.g Repository URL and Owner URL and User URL)")
 	output := flag.String("o","","write output file (optional)")
+	version := flag.Bool("version",false,"version of gitls")
 	_=output
-
 	flag.Parse()
+	if *version {
+		fmt.Println(printing.VERSION)
+		return
+	}
+
 	if *list == "" {
 		sc := bufio.NewScanner(os.Stdin)
 		for sc.Scan() {
