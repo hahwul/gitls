@@ -9,6 +9,12 @@
 
 > abcd
 
+## Installation
+### From go-get
+```
+$ go get -u github.com/hahwul/gitls
+```
+
 ## Usage 
 ```
   -l string
