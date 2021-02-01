@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="https://user-images.githubusercontent.com/13212227/100126258-1329bb80-2ec1-11eb-915b-7a536a2524e0.png" alt="" width="500px;"></a>
+  <a href=""><img src="" alt="" width="500px;"></a>
   <br>
   
   <a href="https://twitter.com/intent/follow?screen_name=hahwul"><img src="https://img.shields.io/twitter/follow/hahwul?style=flat&logo=twitter"></a>
