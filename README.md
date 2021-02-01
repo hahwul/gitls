@@ -70,5 +70,10 @@ https://github.com/s0md3v/zetanize
 $ gitls -l sample.lst | xargs -I % gitleaks --repo-url=% -v
 ```
 
+### All clone target's repo
+```
+$ echo "https://github.com/paypal" | gitls | xargs -I % git clone %
+```
+
 ## Contributors
 ![](/CONTRIBUTORS.svg)
