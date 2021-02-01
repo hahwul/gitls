@@ -31,6 +31,7 @@ func GetRepoListFromUser(user,repoHost string, options model.Options){
 
 		resp, err := client.Do(req)
 		if err	!= nil {
+
 		}
 
 		defer resp.Body.Close()

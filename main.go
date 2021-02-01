@@ -18,12 +18,12 @@ func main(){
 	version := flag.Bool("version",false,"version of gitls")
 	proxy := flag.String("proxy","","using custom proxy")
 	useTor := flag.Bool("tor",false,"using tor proxy / localhost:9050")
+	flag.Parse()
 	options := model.Options{
 		Proxy:            *proxy,
 		UseTor:           *useTor,
 		Output:           *output,
 	}
-	flag.Parse()
 	if *version {
 		fmt.Println(printing.VERSION)
 		return

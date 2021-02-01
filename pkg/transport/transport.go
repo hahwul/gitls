@@ -35,7 +35,6 @@ func GetTransport(options model.Options) *http.Transport {
 	}
 	if options.UseTor {
 		proxyAddress, err := url.Parse("http://localhost:9050")
-		_ = proxyAddress
 		if err != nil {
 			msg := fmt.Sprintf("not running %v from proxy option", err)
 			fmt.Println(msg)
