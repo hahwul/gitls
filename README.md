@@ -11,6 +11,15 @@
 
 > Listing git repository from `URL`/`User`/`Org`
 
+This tool is available when the repository, such as github, is included in the bugbounty scope. Sometimes specified as an org name or user name rather than a specific repository, you can use this tool to extract url from all public repositories included in the org/user.
+
+This can be used for various actions such as scanning or cloning for multiple repositories.
+
+> 🚧 NOTICE <br>
+For unauthenticated requests in github api, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
+[https://docs.github.com/en/rest/overview/resources-in-the-rest-api](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)<br><br>
+So too many tasks can be blocked by the API for a certain time from github. In this case, you can select the appropriate destination or access and use any IP using the torsocks(e.g `torsocks gitls -l user.list`) or `-tor` options.
+
 ## Installation
 ### From go-get
 ```
