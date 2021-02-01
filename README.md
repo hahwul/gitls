@@ -9,7 +9,7 @@
   <a href="https://github.com/hahwul"><img src="https://img.shields.io/github/stars/hahwul?style=flat&logo=github"></a>
 </h1>
 
-> abcd
+> Listing git repository from `URL`/`User`/`Org`
 
 ## Installation
 ### From go-get
