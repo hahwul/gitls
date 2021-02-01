@@ -9,6 +9,12 @@
 
 > abcd
 
+## Installation
+### From go-get
+```
+$ go get -u github.com/hahwul/gitls
+```
+
 ## Usage 
 ```
   -l string
@@ -68,6 +74,11 @@ https://github.com/s0md3v/zetanize
 ### Automated testing with [gitleaks](https://github.com/zricethezav/gitleaks)
 ```
 $ gitls -l sample.lst | xargs -I % gitleaks --repo-url=% -v
+```
+
+### All clone target's repo
+```
+$ echo "https://github.com/paypal" | gitls | xargs -I % git clone %
 ```
 
 ## Contributors
