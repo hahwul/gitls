@@ -1,4 +1,4 @@
-project_name: TEMPALTE-HAHWUL
+project_name: gitls
 
 before:
   hooks:
@@ -7,7 +7,7 @@ before:
 builds:
   -
     main: .
-    binary: TEMPALTE-HAHWUL
+    binary: gitls
     goos:
       - windows
       - linux
@@ -47,15 +47,15 @@ changelog:
 release:
   github:
     owner: hahwul
-    name: TEMPALTE-HAHWUL
+    name: gitls
 
 brews:
   -
-    name: TEMPALTE-HAHWUL
+    name: gitls
     tap:
       owner: hahwul
-      name: homebrew-TEMPALTE-HAHWUL
-    url_template: "https://github.com/hahwul/TEMPALTE-HAHWUL/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+      name: homebrew-gitls
+    url_template: "https://github.com/hahwul/gitls/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     commit_author:
       name: hahwul
       email: hahwul@gmail.com
@@ -63,12 +63,12 @@ brews:
     homepage: "https://www.hahwul.com"
     description: ""
     test: |
-      system "#{bin}/TEMPALTE-HAHWUL version"
+      system "#{bin}/gitls -version"
     install: |
-      bin.install "TEMPALTE-HAHWUL"
+      bin.install "gitls"
 snapcrafts:
   -
-    name: TEMPALTE-HAHWUL
+    name: gitls
     # Remember you need to `snapcraft login` first.
     publish: true
     summary: abcd
@@ -78,5 +78,5 @@ snapcrafts:
     license: MIT
 
     apps:
-      TEMPALTE-HAHWUL:
+      gitls:
         plugs: ["home","network","network-bind"]
