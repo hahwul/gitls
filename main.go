@@ -18,7 +18,7 @@ func main() {
 	version := flag.Bool("version", false, "version of gitls")
 	proxy := flag.String("proxy", "", "using custom proxy")
 	useTor := flag.Bool("tor", false, "using tor proxy / localhost:9050")
-	includeAccount := flag.Bool("include-account", false, "include repo of account in targeet")
+	includeAccount := flag.Bool("include-users", false, "include repo of org users(member)")
 	flag.Parse()
 	options := model.Options{
 		Proxy:          *proxy,

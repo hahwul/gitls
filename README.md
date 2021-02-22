@@ -38,8 +38,8 @@ $ sudo snap install gitls
 ## Usage 
 ```
 Usage of gitls:
-  -include-account
-    	include repo of account in targeet
+  -include-users
+    	include repo of org users(member)
   -l string
     	List of targets (e.g -l sample.lst)
   -o string
@@ -98,9 +98,9 @@ https://github.com/s0md3v/Zen
 https://github.com/s0md3v/zetanize
 ```
 
-### Get all repository in org(included members)
+### Get all repository in org and included users(members)
 ```
-$ echo https://github.com/paypal | ./gitls -include-account
+$ echo https://github.com/paypal | ./gitls -include-users
 ```
 
 ```
