@@ -38,6 +38,8 @@ $ sudo snap install gitls
 ## Usage 
 ```
 Usage of gitls:
+  -include-account
+    	include repo of account in targeet
   -l string
     	List of targets (e.g -l sample.lst)
   -o string
@@ -94,6 +96,32 @@ https://github.com/s0md3v/velocity
 https://github.com/s0md3v/XSStrike
 https://github.com/s0md3v/Zen
 https://github.com/s0md3v/zetanize
+```
+
+### Get all repository in org(included members)
+```
+$ echo https://github.com/paypal | ./gitls -include-account
+```
+
+```
+....
+https://github.com/paypal/tech-talks
+https://github.com/paypal/TLS-update
+https://github.com/paypal/yurita
+https://github.com/ahunnargikar
+https://github.com/ahunnargikar/docker-chronos-image
+https://github.com/ahunnargikar/docker-tomcat7
+https://github.com/ahunnargikar/DockerConDemo
+https://github.com/ahunnargikar/elasticsearch-registry-backend
+https://github.com/ahunnargikar/elasticsearchindex
+https://github.com/ahunnargikar/jenkins-dind
+https://github.com/ahunnargikar/jenkins-standalone
+https://github.com/ahunnargikar/vagrant-mesos
+https://github.com/ahunnargikar/vagrant_docker_registry
+https://github.com/anandpalanisamy
+https://github.com/anilgursel
+https://github.com/anilgursel/squbs-sample
+https://github.com/bluepnume
 ```
 
 ### Automated testing with [gitleaks](https://github.com/zricethezav/gitleaks)
