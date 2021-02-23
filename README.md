@@ -9,7 +9,7 @@
   <a href="https://github.com/hahwul"><img src="https://img.shields.io/github/stars/hahwul?style=flat&logo=github"></a>
 </h1>
 
-> Enumerate git repository URL from list of `URL` / `User` / `Org`
+> Enumerate git repository URL from list of `URL` / `User` / `Org`. Friendly to pipeline
 
 This tool is available when the repository, such as github, is included in the bugbounty scope. Sometimes specified as an org name or user name rather than a specific repository, you can use this tool to extract url from all public repositories included in the org/user.
 
