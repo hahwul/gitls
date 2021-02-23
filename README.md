@@ -23,16 +23,16 @@ So too many tasks can be blocked by the API for a certain time from github. In t
 ## Installation
 ### From go-get
 ```
-$ GO111MODULE=on go get -v github.com/hahwul/gitls
+▶ GO111MODULE=on go get -v github.com/hahwul/gitls
 ```
 ### Using homebres
 ```
-$ brew tap hahwul/gitls
-$ brew install gitls
+▶ brew tap hahwul/gitls
+▶ brew install gitls
 ```
 ### Using snapcraft
 ```
-$ sudo snap install gitls
+▶ sudo snap install gitls
 ```
 
 ## Usage 
@@ -64,7 +64,7 @@ https://github.com/s0md3v
 
 make repo url list from sample file
 ```
-$ gitls -l sample.lst
+▶ gitls -l sample.lst
 https://github.com/hahwul/a2sv
 https://github.com/hahwul/action-dalfox
 https://github.com/hahwul/asset-of-hahwul.com
@@ -100,7 +100,7 @@ https://github.com/s0md3v/zetanize
 
 ### Get all repository in org and included users(members)
 ```
-$ echo https://github.com/paypal | ./gitls -include-users
+▶ echo https://github.com/paypal | ./gitls -include-users
 ```
 
 ```
@@ -126,12 +126,12 @@ https://github.com/bluepnume
 
 ### Automated testing with [gitleaks](https://github.com/zricethezav/gitleaks)
 ```
-$ gitls -l sample.lst | xargs -I % gitleaks --repo-url=% -v
+▶ gitls -l sample.lst | xargs -I % gitleaks --repo-url=% -v
 ```
 
 ### All clone target's repo
 ```
-$ echo "https://github.com/paypal" | gitls | xargs -I % git clone %
+▶ echo "https://github.com/paypal" | gitls | xargs -I % git clone %
 ```
 
 ## Contributors
