@@ -23,7 +23,7 @@ So too many tasks can be blocked by the API for a certain time from github. In t
 ## Installation
 ### From go-get
 ```
-▶ GO111MODULE=on go install github.com/hahwul/gitls@latest
+▶ go install -v github.com/hahwul/gitls@latest
 ```
 ### Using homebres
 ```
