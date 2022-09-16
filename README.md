@@ -18,7 +18,9 @@ This can be used for various actions such as scanning or cloning for multiple re
 > 🚧 NOTICE <br>
 For unauthenticated requests in github api, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
 [https://docs.github.com/en/rest/overview/resources-in-the-rest-api](https://docs.github.com/en/rest/overview/resources-in-the-rest-api)<br><br>
-So too many tasks can be blocked by the API for a certain time from github. In this case, you can select the appropriate destination or access and use any IP using the torsocks(e.g `torsocks gitls -l user.list`) or `-tor` options.
+So too many tasks can be blocked by the API for a certain time from github. In this case, you can select the appropriate destination or access and use any IP using the torsocks(e.g `torsocks gitls -l user.list`) or `-tor` or `-proxy http://localhost:<TOR-PORT>` options.
+
+![](https://user-images.githubusercontent.com/13212227/190673282-5c0611dc-a594-4ed4-8b8c-e9be1a6257ac.png)
 
 ## Installation
 ### From go-get
