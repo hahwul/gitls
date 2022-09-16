@@ -1,13 +1,14 @@
-package transport 
+package transport
 
 import (
 	"crypto/tls"
 	"fmt"
-	"github.com/hahwul/gitls/pkg/model"
 	"net"
 	"net/http"
 	"net/url"
 	"time"
+
+	"github.com/hahwul/gitls/pkg/model"
 )
 
 // GetTransport is setting timetout and proxy on tranport
